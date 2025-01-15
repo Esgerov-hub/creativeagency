@@ -309,30 +309,54 @@
             });
         });
     </script>
-    <script>
-        document.getElementById('input-category').addEventListener('change', function() {
-            var positionId = this.value;
-            var currentLang = "{{ $currentLang }}"; // Make sure this variable is accessible
+<script>
+    document.getElementById('input-category').addEventListener('change', function () {
+        var positionId = this.value;
+        var currentLang = "{{ $currentLang }}";
+        var parentSelect = document.getElementById('input-parent-category');
 
-            if (positionId) {
-                // Make the AJAX call
-                fetch(`/admin/parent-positions/${positionId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        var parentSelect = document.getElementById('input-parent-category');
-                        parentSelect.innerHTML = '<option value="">' + '@lang("admin.choose")' + '</option>';
+        if (positionId) {
+            console.log('Fetching parent positions for:', positionId);
 
-                        data.forEach(function(parentPosition) {
+            // Add loading indicator
+            parentSelect.innerHTML = '<option value="">' + '@lang("admin.loading")' + '...</option>';
+
+            fetch(`/az/admin/parent-positions/${positionId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Parent positions fetched:', data);
+                    
+                    // Reset dropdown options
+                    parentSelect.innerHTML = '<option value="">' + '@lang("admin.choose")' + '</option>';
+
+                    if (data.length > 0) {
+                        data.forEach(function (parentPosition) {
                             var option = document.createElement('option');
                             option.value = parentPosition.id;
-                            option.text = parentPosition.title[currentLang] || '';
+                            option.text = parentPosition.title?.[currentLang] || 'Unknown Title';
                             parentSelect.appendChild(option);
                         });
-                    })
-                    .catch(error => console.error('Error fetching parent positions:', error));
-            }
-        });
-    </script>
+                    } else {
+                        // If no data, show a message
+                        parentSelect.innerHTML = '<option value="">' + '@lang("admin.no_results")' + '</option>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching parent positions:', error);
+                    // Display an error message
+                    parentSelect.innerHTML = '<option value="">' + '@lang("admin.error_loading")' + '</option>';
+                });
+        } else {
+            // Reset dropdown if no category is selected
+            parentSelect.innerHTML = '<option value="">' + '@lang("admin.choose")' + '</option>';
+        }
+    });
+</script>
 
     <script src="{{ asset('summernote/summernote-bs4.min.js') }}"></script>
     <script src="{{ asset('summernote/editor_summernote.js') }}"></script>

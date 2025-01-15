@@ -41,7 +41,7 @@
                                     {{ !empty($data['full_name'][$currentLang]) ? $data['full_name'][$currentLang] : null }}
                                 </h5>
                                 <p class="mil-link mil-light-soft mil-mb-10">
-                                    {{ !empty($data['positionParent']['title'][$currentLang]) ? $data['positionParent']['title'][$currentLang] : \Illuminate\Support\Facades\Lang::get('admin.institute') }}
+                                    {{ !empty($data['parent']['title'][$currentLang]) ? $data['parent']['title'][$currentLang] : \Illuminate\Support\Facades\Lang::get('admin.institute') }}
                                 </p>
                             </div>
                         </div>

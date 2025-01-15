@@ -18,12 +18,9 @@
   'all_view' => 'Bütün xəbərlər',
   'project_yes' => 'Lahiyəniz var?',
   'our_team' => 'Bizim Komanda',
-  'our_team_content' => 'We are talented individuals who are passionate about bringing ideas
-                            to life. With a diverse range of backgrounds and skill sets, we collaborate to produce
+  'our_team_content' => 'Creative Agency Studio olaraq, hər biri öz sahəsində mütəxəssis olan peşəkar bir komandaya sahibik. Bizim komandamızda IT və SMM sahələrində uzun illər təcrübəsi olan yaradıcı mütəxəssislər, dizaynerlər, inkişaf etdiricilər və marketinq ekspertləri yer alır. Hər bir üzvümüzün məqsədi, müştərilərimizin bizneslərini inkişaf etdirmək və rəqəmsal dünyada uğur qazanmalarına dəstək olmaqdır.                            to life. With a diverse range of backgrounds and skill sets, we collaborate to produce
                             effective solutions for our clients.',
-  'our_team_text' => 'We are talented individuals who are passionate about bringing ideas
-                            to life. With a diverse range of backgrounds and skill sets, we collaborate to produce
-                            effective solutions for our clients.',
+  'our_team_text' => 'Creative Agency Studio olaraq, hər biri öz sahəsində mütəxəssis olan peşəkar bir komandaya sahibik. Bizim komandamızda IT və SMM sahələrində uzun illər təcrübəsi olan yaradıcı mütəxəssislər, dizaynerlər, inkişaf etdiricilər və marketinq ekspertləri yer alır. Hər bir üzvümüzün məqsədi, müştərilərimizin bizneslərini inkişaf etdirmək və rəqəmsal dünyada uğur qazanmalarına dəstək olmaqdır.',
   'contact_us' => 'Bizimlə Əlaqə',
   'our_customer' => 'Bizim müştərilərimiz',
   'more_subject' => 'Mövzu haqqda ətraflı məlumat',

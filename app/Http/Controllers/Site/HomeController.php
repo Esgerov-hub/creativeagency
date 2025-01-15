@@ -48,7 +48,7 @@ class HomeController extends Controller
         $usefulLink = UsefulLink::where('status', 1)->get();
         $tariffCategory = TariffCategory::where(['status' => 1])->get();
         $about = About::orderBy('id','DESC')->first();
-        $leaderShip = LeaderShip::where(['status' => 1])->with('position','positionParent')->get();
+        $leaderShip = LeaderShip::where(['status' => 1])->with('position','parent')->get();
         return view('site.home',compact('currentLang','sliders','newsCategory','news','services','usefulLink','tariffCategory','about','leaderShip'));
     }
 
@@ -62,7 +62,7 @@ class HomeController extends Controller
     public function team()
     {
         $currentLang = $this->currentLang;
-        $leaderShip = LeaderShip::where(['status' => 1])->with('position','positionParent')->get();
+        $leaderShip = LeaderShip::where(['status' => 1])->with('position','parent')->get();
         return view('site.team',compact('currentLang','leaderShip'));
     }
 
