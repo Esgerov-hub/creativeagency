@@ -41,7 +41,7 @@ class HomeController extends Controller
     public function index()
     {
         $currentLang = $this->currentLang;
-        $sliders = Slider::where(['status' => 1])->orderBy('id','DESC')->first();
+        $slider = Slider::where(['status' => 1])->orderBy('id','DESC')->first();
         $newsCategory = Category::with('news')->where(['status' => 1])->first();
         $news = News::where(['is_main' => 1,'status' =>1,'category_id' => $newsCategory['id']])->orderBy('datetime','DESC')->offset(0)->limit(2)->get();
         $services = Service::where('status', 1)->get();
@@ -49,7 +49,7 @@ class HomeController extends Controller
         $tariffCategory = TariffCategory::where(['status' => 1])->get();
         $about = About::orderBy('id','DESC')->first();
         $leaderShip = LeaderShip::where(['status' => 1])->with('position','parent')->get();
-        return view('site.home',compact('currentLang','sliders','newsCategory','news','services','usefulLink','tariffCategory','about','leaderShip'));
+        return view('site.home',compact('currentLang','slider','newsCategory','news','services','usefulLink','tariffCategory','about','leaderShip'));
     }
 
     public function about()

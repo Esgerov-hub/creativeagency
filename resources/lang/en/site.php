@@ -17,6 +17,8 @@
   'last_news' => 'Son xəbərlər',
   'all_view' => 'Bütün xəbərlər',
   'project_yes' => 'Lahiyəniz var?',
+  'service_title' => 'Ideanız var?',
+  'service_content' => 'O zaman xidmətlərimizdən yararlanın',
   'our_team' => 'Bizim Komanda',
   'our_team_content' => 'At Creative Agency Studio, we have a team of professionals, each an expert in their field. Our team includes creative specialists, designers, developers, and marketing experts with years of experience in IT and SMM. The goal of each team member is to help our clients grow their businesses and achieve success in the digital world.',
   'our_team_text' => 'At Creative Agency Studio, we have a team of professionals, each an expert in their field. Our team includes creative specialists, designers, developers, and marketing experts with years of experience in IT and SMM. The goal of each team member is to help our clients grow their businesses and achieve success in the digital world.',

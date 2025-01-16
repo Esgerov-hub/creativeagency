@@ -18,13 +18,10 @@
 
             <div class="container">
                 <div class="mil-banner-content mil-up">
-                    <h1 class="mil-muted mil-mb-60">Designing <span class="mil-thin">a Better</span><br> World <span class="mil-thin">Today</span></h1>
+                    <h1 class="mil-muted mil-mb-60"  {!! !empty($slider['title'][$currentLang]) ? $slider['title'][$currentLang] : null !!}</h1>
                     <div class="row">
                         <div class="col-md-7 col-lg-5">
-                            <p class="mil-light-soft mil-mb-60">Welcome to our world of endless imagination and
-                                boundless creativity. Together, let's embark on a remarkable journey where dreams become
-                                tangible realities.</p>
-
+                            <p class="mil-light-soft mil-mb-60">{{ !empty($slider['text'][$currentLang])? $slider['text'][$currentLang]: null }}</p>
                         </div>
                     </div>
                     <a href="{{ route('site.contact') }}" class="mil-button mil-arrow-place mil-btn-space">
@@ -98,10 +95,10 @@
                 <div class="mil-mb-120">
                     <div class="mil-complex-text justify-content-center mil-up mil-mb-15">
                         <span class="mil-text-image"><img src="{{ asset('site/assets/img/photo/2.jpg') }}" alt="team"></span>
-                        <h2 class="mil-h1 mil-muted mil-center">Unique <span class="mil-thin">Ideas</span></h2>
+                        <h2 class="mil-h1 mil-muted mil-center">@lang('site.service_title')</h2>
                     </div>
                     <div class="mil-complex-text justify-content-center mil-up">
-                        <h2 class="mil-h1 mil-muted mil-center">For Your <span class="mil-thin">Business.</span></h2>
+                        <h2 class="mil-h1 mil-muted mil-center"><span class="mil-thin">@lang('site.service_content')</span></h2>
                     </div>
                 </div>
 

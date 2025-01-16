@@ -24,9 +24,9 @@ class ServiceRequest extends FormRequest
     {
         $isCreate = $this->isMethod('post');
         return [
-            'image' => $isCreate ? 'required|mimes:jpeg,jpg,png|max:2048|dimensions:max_width=3000,max_height=2000' : 'mimes:jpeg,jpg,png,webp|max:2048|dimensions:max_width=3000,max_height=2000',
-            'title.*' => 'required|string|max:255',
-            'text.*' => 'nullable|string|max:300',
+            'image' => $isCreate ? 'required|mimes:jpeg,jpg,png,webp' : 'mimes:jpeg,jpg,png,webp',
+            'title.*' => 'required|string',
+            'text.*' => 'nullable|string',
         ];
     }
 

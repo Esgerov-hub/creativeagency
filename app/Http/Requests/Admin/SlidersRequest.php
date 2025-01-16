@@ -24,9 +24,7 @@ class SlidersRequest extends FormRequest
     {
         $isCreate = $this->isMethod('post');
         return [
-            'image' => $isCreate
-                ? 'required|mimes:jpeg,jpg,png|max:2048|dimensions:max_width=1440,max_height=772'
-                : 'nullable|mimes:jpeg,jpg,png|max:2048|dimensions:max_width=1440,max_height=772',
+            'image' => $isCreate ? 'required|mimes:jpeg,jpg,png,webp' : 'mimes:jpeg,jpg,png,webp',
 //            'link' => 'required|string|max:255',
             'title.*' => 'required|string|max:255',
             'text.*' => 'required',

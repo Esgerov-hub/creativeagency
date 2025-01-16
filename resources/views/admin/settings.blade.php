@@ -13,7 +13,7 @@
         @include('components.admin.error')
         <div class="row">
             <div class="col-12">
-                <form action=" @if(!empty($setting['id'])) {{ route('admin.settings.update',$setting['id']) }} @else{{ route('admin.settings.store') }}@endif" method="POST" enctype="multipart/form-data">
+                <form action="@if(!empty($setting['id'])) {{ route('admin.settings.update',$setting['id']) }} @else{{ route('admin.settings.store') }}@endif" method="POST" enctype="multipart/form-data">
                     @csrf
                     @if(!empty($setting['id']))
                         @method('PUT')
