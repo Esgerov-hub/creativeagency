@@ -17,6 +17,39 @@
     <!-- page name -->
     <title>Creative Agency - @yield('site.title')</title>
     @yield('site.css')
+    <style>
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-items .contact {
+            order: 1; /* Əlaqə hər zaman ən altda olacaq */
+        }
+
+        .mil-language-switcher {
+            margin-top: 20px; /* Dil seçicisi bir az aşağıda qalsın */
+            text-align: center;
+        }
+
+        .mil-language-switcher a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .mil-language-switcher a.active {
+            color: #FFA500; /* Aktiv dil fərqləndirilməsi */
+        }
+
+        .mil-language-switcher a:hover {
+            color: #FFA500;
+        }
+
+    </style>
 </head>
 <body>
 <!-- wrapper -->

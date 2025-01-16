@@ -38,7 +38,7 @@
 <div class="mil-menu-frame">
     <!-- frame clone -->
     <div class="mil-frame-top">
-        <a href="{{ route('site.index') }}" class="mil-logo">C.A</a>
+        <a href="{{ route('site.index') }}" class="mil-logo">CO.</a>
         <div class="mil-menu-btn">
             <span></span>
         </div>
@@ -73,6 +73,12 @@
                             <li class="mil-has-children">
                                 <a href="{{ route('site.contact') }}">@lang('site.contact')</a>
                             </li>
+                            <!-- Dil Seçimi -->
+                            <div class="mil-language-switcher">
+                                <a href="/az" class="{{ app()->getLocale() == 'az' ? 'active' : '' }}">AZ</a>
+                                <a href="/en" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a>
+                            </div>
+
                         </ul>
                     </nav>
 
@@ -90,7 +96,7 @@
 <!-- frame -->
 <div class="mil-frame">
     <div class="mil-frame-top">
-        <a href="{{ route('site.index') }}" class="mil-logo">C.A</a>
+        <a href="{{ route('site.index') }}" class="mil-logo">CO.</a>
         <div class="mil-menu-btn">
             <span></span>
         </div>

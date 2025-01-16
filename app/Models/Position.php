@@ -27,6 +27,6 @@ class Position extends Model
     }
 
     public function leaderShip(){
-        return $this->hasMany(LeaderShip::class,'position_id','id')->with('parent');
+        return $this->hasMany(LeaderShip::class,'position_id','id')->with('positionParent');
     }
 }
