@@ -18,10 +18,10 @@
 
             <div class="container">
                 <div class="mil-banner-content mil-up">
-                    <h1 class="mil-muted mil-mb-60"  {!! !empty($slider['title'][$currentLang]) ? $slider['title'][$currentLang] : null !!}</h1>
+                    <h1 class="mil-muted mil-mb-60"> {!! !empty($slider['title'][$currentLang]) ? $slider['title'][$currentLang] : null !!}</h1>
                     <div class="row">
                         <div class="col-md-7 col-lg-5">
-                            <p class="mil-light-soft mil-mb-60">{{ !empty($slider['text'][$currentLang])? $slider['text'][$currentLang]: null }}</p>
+                            <p class="mil-light-soft mil-mb-60">{!! !empty($slider['text'][$currentLang])? $slider['text'][$currentLang]: null !!}</p>
                         </div>
                     </div>
                     <a href="{{ route('site.contact') }}" class="mil-button mil-arrow-place mil-btn-space">
