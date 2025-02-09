@@ -49,7 +49,12 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label">@lang('admin.text') - {{$lang['code']}}</label>
-                                                    <textarea class="form-control" type="text" name="text[{{$lang['code']}}]" >{{ !empty($service['text'][$lang['code']])? $service['text'][$lang['code']]: NULL }}</textarea>
+                                                    <textarea class="editor form-control"
+                                                              data-locale="{{ $lang['code'] }}"
+                                                              data-csrf-token="{{ csrf_token() }}"
+                                                              name="text[{{$lang['code']}}]">
+                                                            {{ !empty($service['text'][$lang['code']]) ? $service['text'][$lang['code']]: null }}
+                                                        </textarea>
                                                 </div>
                                             </div>
                                         </div>

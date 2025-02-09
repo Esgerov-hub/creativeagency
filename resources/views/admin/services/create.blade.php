@@ -47,7 +47,10 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label">@lang('admin.text') - {{$lang['code']}}</label>
-                                                    <textarea class="form-control" type="text" name="text[{{$lang['code']}}]" ></textarea>
+                                                    <textarea class="editor form-control"
+                                                              data-locale="{{ $lang['code'] }}"
+                                                              data-csrf-token="{{ csrf_token() }}"
+                                                              name="text[{{$lang['code']}}]"></textarea>
                                                 </div>
                                             </div>
                                         </div>
