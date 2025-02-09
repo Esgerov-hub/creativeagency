@@ -30,7 +30,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 col-xl-5">
                     <div class="mil-mb-90">
-                        <p class="mil-up mil-mb-30">{!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
+                        {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}
                     </div>
                 </div>
                 <div class="col-lg-5">
