@@ -11,6 +11,7 @@
 <!-- cursor end -->
 
 <!-- preloader -->
+@if(Route::currentRouteName() === 'site.index')
 <div class="mil-preloader">
     <div class="mil-preloader-animation">
         <div class="mil-pos-abs mil-animation-1">
@@ -26,6 +27,7 @@
         </div>
     </div>
 </div>
+@endif
 <!-- preloader end -->
 
 <!-- scrollbar progress -->
