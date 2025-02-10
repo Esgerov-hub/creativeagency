@@ -105,7 +105,7 @@
                 <div class="row mil-services-grid m-0">
                     @if(!empty($services))
                         @foreach($services as $service)
-                            <div class="col-md-6 col-lg-3 mil-services-grid-item p-0">
+                            <div class="col-md-5 col-lg-3 mil-services-grid-item p-0">
                                 <a href="{{ route('site.service',$service['slug'][$currentLang]) }}" class="mil-service-card-sm mil-up">
                                     <h5 class="mil-muted mil-mb-30">{{ !empty($service['title'][$currentLang])? $service['title'][$currentLang]: null }}</h5>
                                     <p class="mil-light-soft mil-mb-30">{!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: null !!}</p>
