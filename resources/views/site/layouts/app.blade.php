@@ -31,7 +31,6 @@
 
         .mil-language-switcher {
             margin-top: 20px; /* Dil seçicisi bir az aşağıda qalsın */
-            text-align: center;
         }
 
         .mil-language-switcher a {

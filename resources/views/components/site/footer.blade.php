@@ -17,6 +17,8 @@
                                 <li><a href="{{ !empty($setting['facebook'])? $setting['facebook']: NULL }}" target="_blank" class="social-icon"> <i class="fab fa-facebook"></i></a></li>
                                 <li><a href="{{ !empty($setting['linkedin'])? $setting['linkedin']: NULL }}" target="_blank" class="social-icon"> <i class="fab fa-linkedin"></i></a></li>
                                 <li><a href="{{ !empty($setting['instagram'])? $setting['instagram']: NULL }}" target="_blank" class="social-icon"> <i class="fab fa-instagram"></i></a></li>
+                                <li><a href="/az" class="{{ app()->getLocale() == 'az' ? 'active' : '' }}" class="social-icon">AZ</a></li>
+                                <li><a href="/en" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}" class="social-icon">EN</a></li>
                             </ul>
                         </div>
                     </div>
@@ -28,19 +30,19 @@
 
                             <nav class="mil-footer-menu mil-mb-60">
                                 <ul>
-                                    <li class="mil-up mil-active">
+                                    <li class="mil-up {{ Route::currentRouteName() === 'site.index' ? 'mil-active' : '' }}">
                                         <a href="{{ route('site.index') }}">@lang('site.home')</a>
                                     </li>
-                                    <li class="mil-up">
+                                    <li class="mil-up {{ Route::currentRouteName() === 'site.about' ? 'mil-active' : '' }}">
                                         <a href="{{ route('site.about') }}">@lang('site.about')</a>
                                     </li>
-                                    <li class="mil-up">
+                                    <li class="mil-up {{ Route::currentRouteName() === 'site.portfolio' ? 'mil-active' : '' }}">
                                         <a href="{{ route('site.portfolio') }}">@lang('site.portfolio')</a>
                                     </li>
-                                    <li class="mil-up">
+                                    <li class="mil-up {{ Route::currentRouteName() === 'site.news' ? 'mil-active' : '' }}">
                                         <a href="{{ route('site.news') }}">@lang('site.news')</a>
                                     </li>
-                                    <li class="mil-up">
+                                    <li class="mil-up {{ Route::currentRouteName() === 'site.contact' ? 'mil-active' : '' }}">
                                         <a href="{{ route('site.contact') }}">@lang('site.contact')</a>
                                     </li>
                                 </ul>

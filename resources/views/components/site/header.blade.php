@@ -53,10 +53,10 @@
 
                     <nav class="mil-main-menu" id="swupMenu">
                         <ul>
-                            <li class="mil-has-children mil-active">
+                            <li class="mil-has-children {{ Route::currentRouteName() === 'site.home' ? 'mil-active' : '' }}">
                                 <a href="{{ route('site.index') }}">@lang('site.home')</a>
                             </li>
-                            <li class="mil-has-children">
+                            <li class="mil-has-children {{ Route::currentRouteName() === 'site.portfolio' ? 'mil-active' : '' }}">
                                 <a href="{{ route('site.portfolio') }}">@lang('site.portfolio')</a>
                             </li>
                             <li class="mil-has-children">
@@ -64,22 +64,19 @@
                                 <ul>
                                     @if(!empty($services))
                                         @foreach($services as $service)
-                                            <li><a href="{{ route('site.service',$service['slug'][$currentLang]) }}">{{ !empty($service['title'][$currentLang])? $service['title'][$currentLang]: null }}</a></li>
+                                            <li class="{{ Route::currentRouteName() === 'site.service',$service['slug'][$currentLang] ? 'mil-active' : '' }}"><a href="{{ route('site.service',$service['slug'][$currentLang]) }}">{{ !empty($service['title'][$currentLang])? $service['title'][$currentLang]: null }}</a></li>
                                         @endforeach
                                     @endif
                                 </ul>
                             </li>
-                            <li class="mil-has-children">
+                            <li class="mil-has-children {{ Route::currentRouteName() === 'site.news' ? 'mil-active' : '' }}">
                                 <a href="{{ route('site.news') }}">@lang('site.news')</a>
                             </li>
-                            <li class="mil-has-children">
+                            <li class="mil-has-children {{ Route::currentRouteName() === 'site.contact' ? 'mil-active' : '' }}">
                                 <a href="{{ route('site.contact') }}">@lang('site.contact')</a>
                             </li>
                             <!-- Dil Seçimi -->
-                            <div class="mil-language-switcher">
-                                <a href="/az" class="{{ app()->getLocale() == 'az' ? 'active' : '' }}">AZ</a>
-                                <a href="/en" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a>
-                            </div>
+
 
                         </ul>
                     </nav>
