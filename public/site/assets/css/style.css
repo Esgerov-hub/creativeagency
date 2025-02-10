@@ -903,12 +903,12 @@ spaces
 }
 
 .mil-p-120-90 {
-  padding-top: 120px;
+  padding-top: 42px;
   padding-bottom: 90px;
 }
 @media screen and (max-width: 992px) {
   .mil-p-120-90 {
-    padding-top: 90px;
+    padding-top: 29px;
     padding-bottom: 60px;
   }
 }
