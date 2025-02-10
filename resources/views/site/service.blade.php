@@ -7,45 +7,40 @@
 @section('site.content')
     <!-- banner -->
     <div class="mil-inner-banner">
-        <div class="mil-animation-frame">
-            <div class="mil-animation mil-position-4 mil-dark mil-scale" data-value-1="6" data-value-2="1.4"></div>
-        </div>
-        <div class="mil-banner-content mil-up">
+        <div class="mil-banner-content mil-center mil-up">
             <div class="container">
-                <ul class="mil-breadcrumbs mil-mb-60">
+                <ul class="mil-breadcrumbs mil-center mil-mb-60">
                     <li><a href="{{ route('site.index') }}">@lang('site.home')</a></li>
                     <li><a href="">{{ !empty($service['title'][$currentLang]) ? $service['title'][$currentLang]: '' }}</a></li>
                 </ul>
-                <h1 class="mil-mb-60">{{ !empty($service['title'][$currentLang]) ? $service['title'][$currentLang]: '' }}</h1>
-                <a href="#service" class="mil-link mil-dark mil-arrow-place mil-down-arrow">
-                    <span></span>
-                </a>
+                <h2><span class="mil-thin">{!! !empty($service['title'][$currentLang])? $service['title'][$currentLang]: null !!}</span></h2>
             </div>
         </div>
     </div>
-    <!-- banner end -->
-    <!-- about -->
-    <section id="about">
-        <div class="container mil-p-120-30">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6 col-xl-5">
-                    <div class="mil-mb-90">
-                        {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="mil-about-photo mil-mb-90">
-                        <div class="mil-lines-place"></div>
-                        <div class="mil-up mil-img-frame" style="padding-bottom: 160%;">
-                            <img src="{{ asset('uploads/services/'.$service->image) }}" alt="img" class="mil-scale" data-value-1="1" data-value-2="1.2">
-                        </div>
-                    </div>
+    <!-- publication -->
+    <section id="blog">
+        <div class="container mil-p-120-90">
+            <div class="row justify-content-center">
 
+                <div class="col-lg-8">
+                    <p class="mil-text-xl mil-dark mil-up mil-mb-60">    {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
+
+                        <div class="row">
+                            <div class="swiper-container news-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="mil-image-frame mil-horizontal mil-up mil-mb-30">
+                                            <img src="{{ asset('uploads/services/'.$service->image) }}" alt="Publication cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- about end -->
 @endsection
 @section('site.js')
 
