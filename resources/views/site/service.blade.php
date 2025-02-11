@@ -22,7 +22,7 @@
         <div class="container mil-p-120-90">
             <div class="row justify-content-center">
 
-                <div class="col-lg-8">
+                <div class="col-lg-16">
                     <p class="mil-text-xl mil-dark mil-up mil-mb-60">    {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
 
                         <div class="row">
