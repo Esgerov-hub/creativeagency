@@ -23,20 +23,19 @@
             <div class="row justify-content-center">
 
                 <div class="col-lg-16">
-                    <p class="mil-text-xl mil-dark mil-up mil-mb-60">    {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
-
-                        <div class="row">
-                            <div class="swiper-container news-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="mil-image-frame mil-horizontal mil-up mil-mb-30">
-                                            <img src="{{ asset('uploads/services/'.$service->image) }}" alt="Publication cover">
-                                        </div>
+                    <p class="mil-text-xl mil-dark mil-up mil-mb-60"> {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
+                    <div class="row">
+                        <div class="swiper-container news-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mil-image-frame mil-horizontal mil-up mil-mb-30">
+                                        <img src="{{ asset('uploads/services/'.$service->image) }}" alt="Publication cover">
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
