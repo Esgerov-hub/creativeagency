@@ -23,7 +23,7 @@
             <div class="row justify-content-center">
 
                 <div class="col-lg-16">
-                    <p class="mil-text-xl mil-dark mil-up mil-mb-60"> {!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}</p>
+                  {{--  <p class="mil-text-xl mil-dark mil-up mil-mb-60"> --}}{!! !empty($service['text'][$currentLang])? $service['text'][$currentLang]: NULL  !!}{{--</p>--}}
                     <div class="row">
                         <div class="swiper-container news-slider">
                             <div class="swiper-wrapper">
